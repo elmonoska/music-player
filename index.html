@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Global metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/player-buttons/song-play.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/images/player-buttons/song-play.svg">
+    <!-- Hexadecimal -->
+    <meta name="theme-color" content="">
+    <!-- Primary meta tags -->
+    <!-- Between 0 and 65 -->
+    <title>Music Player | ElMonoSka</title>
+    <!-- No more than 65 characters -->
+    <meta name="description" content="">
+    <!-- Open graph -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+    <!-- Css -->
+    <link rel="stylesheet" href="./src/styles/custom.css">
+
+  </head>
+  <body class="bg-slate-300 text-slate-950 font-poppins">
+    <h1 class="text-4xl text-center w-fit mx-auto mt-4">Music player</h1>
+    
+    <main class="container m-4 flex-grow-[1] grid grid-cols-1 place-content-center md:grid-cols-2">
+
+      <section class="player flex flex-col flex-wrap text-center p-4" id="player">
+        <figure class="player__figure h-[200px] w-[200px] md:h-[300px] md:w-[300px] mx-auto rounded-full overflow-hidden" id="song-img">
+          <img src="./assets/images/disc-default.webp" alt="Portada de canción." class="player__img w-full h-full object-cover">
+        </figure>
+        
+        <p class="player__song-name text-2xl first-letter:text-pink-500 first-letter:text-3xl" id="song-name">Titulo de canción</p>
+        
+        <p class="player__song-artist font-bold text-xl" id="song-artist">Artista de canción</p>
+        
+        <p class="player__song-album font-bold text-lg" id="song-album">Album de canción</p>
+        
+        <input type="range" id="song-current-time-bar" class="player__song-current-time-bar" value="0">
+        
+        <section class="flex justify-between">
+          <time class="player__song-current-time" id="song-current-time">00:00</time>
+          <time class="player__song-duration" id="song-duration">00:00</time>
+        </section>
+  
+        <section class="player__buttons flex justify-evenly [&>button>img]:rounded-full [&>button>img]:w-[50px] [&>button>img]:p-2 hover:[&>button]:scale-105 transition-all">
+          <button class="player__btn-list md:hidden" id="btn-list">
+            <img class="bg-slate-950" src="./assets/images/player-buttons/list.svg" alt="Lista de canciones">
+          </button>
+          <button class="player__btn-previous" id="btn-previous">
+            <img class="bg-slate-950" src="./assets/images/player-buttons/song-previous.svg" alt="Canción anterior">
+          </button>
+          <button class="player__btn-state" id="btn-state">
+            <img class="bg-slate-950" src="./assets/images/player-buttons/song-play.svg" alt="Reproducir o pausa">
+          </button>
+          <button class="player__btn-next" id="btn-next">
+            <img class="bg-slate-950" src="./assets/images/player-buttons/song-next.svg" alt="Canción siguiente">
+          </button>
+          <button class="player__btn-random" id="btn-random">
+            <img class="bg-slate-950" src="./assets/images/player-buttons/random.svg" alt="Reproducción aleatoria">
+          </button>
+        </section>
+      </section>
+
+
+      <section class="play-list bg-slate-900/90 text-slate-50 flex flex-col fixed inset-0 p-4 -translate-x-full transition-transform md:static md:translate-x-0 md:bg-slate-600 md:rounded-3xl md:max-h-[500px]" id="container-list">
+        <button class="play-list__close-list w-[40px] h-[40px] rounded-full self-end md:hidden" id="btn-close-list">
+          <img src="./assets/images/player-buttons/menu-close.svg" alt="Botón de cerrar" class="object-cover">
+        </button>
+        <h2 class="text-center text-2xl">Lista de reproducción.</h2>
+        <ul id="song-list" class="grid grid-cols-1 text-center overflow-y-auto md:overflow-auto gap-2 py-4 *:cursor-pointer *:p-2 hover:*:bg-slate-500 *:transition-colors *:rounded-md">
+          <!-- Song list loaded with js -->
+        </ul>
+
+      </section>
+    </main>
+
+    <footer class="footer-dev bg-slate-950 text-slate-50 p-8 text-center">
+      <p class="footer-dev__text">Desarrollado con 💖 por <a href="https://github.com/elmonoska" class="text-sky-400 hover:text-sky-500 transition-colors">ElMonoSka</a></p>
+    </footer>
+
+    <script type="module" src="./src/js/music-player.js"></script>
+  </body>
+</html>

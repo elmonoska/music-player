@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ********** FONTS ********** */
+@font-face {
+  font-family: Poppins;
+  src: url("../../assets/fonts/Poppins-Regular.ttf");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+/* ********** ********* ********** */
+
+
+
+/* ********** CUSTOM PROPERTIES ********** */
+:root {
+  
+}
+/* ********** ********* ********** */
+
+
+
+/* ********** RESET CSS ********** */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Multimedia se adapta al tamaño del contenedor */
+img, audio, video, iframe, canvas, svg, picture {
+  max-width: 100%;
+  height: auto;
+}
+/* Balanceo de los títulos y los párrafos */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+/* ********** ********* ********** */
+
+
+
+/* ********** UTILITIES ********** */
+.container {
+    width: clamp(300px, 100ch, 90vw);
+    height: auto;
+    margin-inline: auto;
+}
+/* ********** ********* ********** */
+
+
+
+/* ********** SITE STYLES ********** */
+/* Theme color: dark and light */
+@media screen and (prefers-color-scheme: light) {
+  
+}
+@media screen and (prefers-color-scheme: dark) {
+  
+}
+/* Media queries 
+  Breakpoints
+  sm - 480px - 30em
+  md - 768px - 48em
+  lg - 992px - 62em
+  xl - 1200px - 75em
+*/
+@media (30em <= width) {
+  
+}
+@media (48em <= width) {
+  
+}
+@media (62em <= width) {
+  
+}
+@media (75em <= width) {
+  
+}
+
+/* ********** ********* ********** */
