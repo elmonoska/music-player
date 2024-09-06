@@ -15,3 +15,4 @@ npm run t
 ## More credits
 * [SVG repo](https://www.svgrepo.com/)
 * [Fiftysounds](https://www.fiftysounds.com/es/)
+* [Tailwind](https://tailwindcss.com/)
